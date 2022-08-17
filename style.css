@@ -1,69 +1,101 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
-body{
-    background-color: rgb(148, 148, 148);
-    display: flex;
-    justify-content: center;
+body {
+  background-color: rgb(148, 148, 148);
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
+}
+
+label{
+    font-weight: bold;
+}
+
+button{
+    padding: 5px;
 }
 
 /********************/
 /*Library List*/
 /********************/
 
-.library{
-    background-color: azure;
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    height: 100vh;
-    padding: 25px;
-    gap: 15px;
+.library {
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100vh;
+  padding: 25px;
+  gap: 15px;
 }
 
-.library-list{
-    display: flex;
-    flex-direction: column;    
-    gap:15px;
+.library-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.library-list>p{
-    font-size: 25pt;
+.library-list > p {
+  font-size: 25pt;
 }
 
 /********************/
 /*Add Book Modal*/
 /********************/
 
-.add-modal{
-    display: none;
-    position: absolute;
-    background: rgb(129, 128, 128);
-    padding:10px;   
-    vertical-align: middle; 
-    border-radius: 15px;
+.add-modal {
+  display: none;
+  position: absolute;
+  background: rgb(129, 128, 128);
+  padding: 10px;
+  vertical-align: middle;
+  border-radius: 15px;
 }
 
+.modal-header{
+    text-align: right;
+}
 
-
-.close{
-    display: flex;
-    justify-content: flex-end;
-    background-color: red;
-    padding:3px;
-
-    color: #aaaaaa;
-  float: right;
+.close { 
+  color: #ffffff;
   font-size: 28px;
   font-weight: bold;
 }
 
-.modal-header>p{
-    justify-content:left;
+.close:hover{
+    background-color: red;
+}
+
+.add-book-form{
+    margin: 10px;
+}
+
+.add-book-form>p{
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.add-book-form ul{
+    margin-bottom:15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.add-book-form ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-buttons{
+    float: right;
 }
