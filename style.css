@@ -5,6 +5,36 @@
 
 body{
     background-color: rgb(148, 148, 148);
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+/********************/
+/*Library List*/
+/********************/
+
+.library{
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100vh;
+    padding: 25px;
+    gap: 15px;
+}
+
+.library-list{
+    display: flex;
+    flex-direction: column;    
+    gap:15px;
+}
+
+.library-list>p{
+    font-size: 25pt;
 }
 
 /********************/
@@ -13,4 +43,27 @@ body{
 
 .add-modal{
     display: none;
+    position: absolute;
+    background: rgb(129, 128, 128);
+    padding:10px;   
+    vertical-align: middle; 
+    border-radius: 15px;
+}
+
+
+
+.close{
+    display: flex;
+    justify-content: flex-end;
+    background-color: red;
+    padding:3px;
+
+    color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-header>p{
+    justify-content:left;
 }
