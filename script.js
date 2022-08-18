@@ -17,11 +17,12 @@ console.log(tempBook.title);
 
 displayBooks();
 
-function Book(title, author, pages) {
+function Book(title, author, pages, isRead = true) {
   // the constructor...
   this.title = title;
   this.author = author;
   this.pages = pages;
+  this.isRead = Boolean(isRead);
 }
 
 function addBookToLibrary() {
@@ -66,6 +67,9 @@ function displayBooks() {
     bookAuthor.classList.add("book-author");
     let bookPages = document.createElement("p");
     bookPages.classList.add("book-pages");
+    let isReadToffle = document.createElement("input");
+    isReadToffle.type = "checkbox";
+    let isReadLabel = document.createElement("label");
     let removeBookBtn = document.createElement("button");
     removeBookBtn.classList.add("remove");
     removeBookBtn.addEventListener("click", function(){
@@ -78,24 +82,18 @@ function displayBooks() {
     bookTitle.innerHTML = "Title: " + myLibrary[book].title;
     bookAuthor.innerHTML = "Author: " + myLibrary[book].author;
     bookPages.innerHTML = "Pages: " + myLibrary[book].pages;
+    isReadLabel.innerHTML = "Read?";
     removeBookBtn.innerHTML = "Remove";
 
     libraryBook.appendChild(bookTitle);
     libraryBook.appendChild(bookAuthor);
     libraryBook.appendChild(bookPages);
+    libraryBook.appendChild(isReadToffle);
+    libraryBook.appendChild(isReadLabel);
     libraryBook.appendChild(removeBookBtn);
 
     libraryList.appendChild(libraryBook);
   }
-}
-
-function removeBook(){
-    //TODO: get reference to 
-    console.log("hi!");
-    // remove book from list
-
-    // re-draw library list
-    // displayBooks();
 }
 
 function openAddBookForm() {
