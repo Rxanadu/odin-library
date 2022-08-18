@@ -32,7 +32,7 @@ function addBookToLibrary() {
     authorInput.value != "" &&
     pagesInput.value != ""
   ) {
-    newBook = new Book(titleInput, authorInput, pagesInput);    
+    newBook = new Book(titleInput.value, authorInput.value, pagesInput.value);    
     myLibrary.push(newBook);
 
     displayBooks();
@@ -113,7 +113,7 @@ function clearAddBookFormFields() {
   pagesInput.value = "";
 }
 
-// window.addEventListener("load", displayBooks);
+window.addEventListener("load", displayBooks);
 
 openModalBtn.addEventListener("click", openAddBookForm);
 
