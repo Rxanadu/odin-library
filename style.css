@@ -47,6 +47,20 @@ button{
 }
 
 /********************/
+/*Book Display*/
+/********************/
+
+.book{
+    padding: 7px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+}
+
+.book > button{
+    float: right;
+}
+
+/********************/
 /*Add Book Modal*/
 /********************/
 

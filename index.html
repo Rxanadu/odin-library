@@ -13,11 +13,14 @@
     <div class="library">
         <p>My Library</p>
         <ul class="library-list">
-            <li class="book">Book 1</li>
-            <li class="book">Book 2</li>
-            <li class="book">Book 3</li>
+            <li class="book">
+                <p class="book-title">Book 1</p>
+                <p class="book-author">by Author</p>
+                <p class="book-pages"># pages</p>
+                <button class="remove">Remove</button>
+            </li>
         </ul>
-        <button class="add" id="add-btn">NEW BOOK</button>
+        <button class="open-modal" id="open-modal">NEW BOOK</button>
     </div>
     <div class="add-modal" id="add-modal">
         <div class="modal-content">
@@ -42,7 +45,7 @@
                 </ul>
             </div>
             <div class="form-buttons">
-                <button id="submit">Add Book</button>
+                <button id="add-book">Add Book</button>
             </div>
         </div>
     </div>
