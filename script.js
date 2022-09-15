@@ -10,20 +10,22 @@ const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const pagesInput = document.getElementById("pages");
 
+displayBooks();
+
+class Book {
+  constructor(title, author, pages, isRead = true) {
+    // the constructor...
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isRead = Boolean(isRead);
+  }
+}
+
 var tempBook = new Book("test", "hello", 55);
 myLibrary.push(tempBook);
 console.log(myLibrary);
 console.log(tempBook.title);
-
-displayBooks();
-
-function Book(title, author, pages, isRead = true) {
-  // the constructor...
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.isRead = Boolean(isRead);
-}
 
 function addBookToLibrary() {
   // do stuff here
@@ -33,7 +35,7 @@ function addBookToLibrary() {
     authorInput.value != "" &&
     pagesInput.value != ""
   ) {
-    newBook = new Book(titleInput.value, authorInput.value, pagesInput.value);    
+    newBook = new Book(titleInput.value, authorInput.value, pagesInput.value);
     myLibrary.push(newBook);
 
     displayBooks();
@@ -72,13 +74,13 @@ function displayBooks() {
     let isReadLabel = document.createElement("label");
     let removeBookBtn = document.createElement("button");
     removeBookBtn.classList.add("remove");
-    removeBookBtn.addEventListener("click", function(){
-        myLibrary.splice(book, 1);
-        displayBooks();
-        console.log(myLibrary.length);
+    removeBookBtn.addEventListener("click", function () {
+      myLibrary.splice(book, 1);
+      displayBooks();
+      console.log(myLibrary.length);
     });
 
-    //  add elements to book    
+    //  add elements to book
     bookTitle.innerHTML = "Title: " + myLibrary[book].title;
     bookAuthor.innerHTML = "Author: " + myLibrary[book].author;
     bookPages.innerHTML = "Pages: " + myLibrary[book].pages;
